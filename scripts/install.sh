@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 
-set -e
-
 VERSION="v1.3.0"
 
-gitDir=$(realpath `dirname $BASH_SOURCE`/..)
-echo $gitDir
+dirname=$(which dirname)
+gitDir=$(realpath `$dirname $BASH_SOURCE`/..)
 
 # uname -s, uname -m
 # Deb 32: Linux i686
